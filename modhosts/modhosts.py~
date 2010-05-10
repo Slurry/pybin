@@ -1,0 +1,32 @@
+#!/usr/bin/python3.1
+import os
+import subprocess
+file = open('/home/jayson/hosts')
+new_file = ''
+for line in file:
+    if 'jwmn810' in line:
+        line = subprocess.check_output(['dig', 'Nokia-N810-43-7', '+short'])
+        linemod = str(line)[2:-3] + '\tjwmn810\n'
+        line = linemod
+        new_file = new_file + line
+    else:
+        if 'jwmlt1' in line:
+            line = subprocess.check_output(['dig', 'jwmlt1', '+short'])
+            linemod = str(line)[2:-3] + '\tjwmlt1\n'
+            line = linemod
+            new_file = new_file + line
+        else:
+            if 'jwmlt2' in line:
+                line = subprocess.check_output(['dig', 'jwmlt2', '+short'])
+                linemod = str(line)[2:-3] + '\tjwmlt2\n'
+                line = linemod
+                new_file = new_file + line
+            else:
+                new_file = new_file + line
+    
+file.close()
+print('newfile is')
+print(new_file)
+file = open('/home/jayson/hosts', 'w')
+file.write(new_file)
+file.close()

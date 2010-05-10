@@ -1,0 +1,25 @@
+* watch
+** english only
+*** by genre
+    watchbygenre
+*** by random
+    watchrandomenglish
+*** by flip
+    fliprandomenglish
+** all languages
+*** by random
+    tunerandomall
+*** by flip
+    fliprandomall
+* listen
+* maintenance
+** stream maintence
+*** add stream
+    addstream
+*** modify stream
+    modifystream
+** content maintence
+*** add stream content
+    addstreamcontent
+*** update stream content
+** genre maintence

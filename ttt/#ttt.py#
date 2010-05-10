@@ -1,0 +1,154 @@
+
+#!/usr/bin/python3.1
+
+""" 
+Provides functions for TTT
+
+# how we display the board
+>>> show_board()
+('0', '|', '1', '|', '2')
+('3', '|', '4', '|', '5')
+('6', '|', '7', '|', '8')
+
+# how AI gets an available sequence to win get_unblocked_sequence. 
+# returns a wcombo, and marker
+>>> seq, mrk = get_unblocked_sequence('x', 'o', wcombos, board)
+>>> len(seq) == 3
+True
+>>> mrk == 'x'
+True
+
+>>> board = pl_sequence(seq, mrk) # <- for testing
+>>> 'x' in board[0:9]
+True
+
+>>> # only one available sequence left at 3,4,5
+>>> board = ['o', 'o', 'o', '3', '4', '5', 'x', 'x', 'x']
+>>> seq, mrk = get_unblocked_sequence('x', 'o', wcombos, board)
+>>> seq == [3, 4, 5]
+True
+
+>>> board = pl_sequence(seq, mrk)
+>>> 'x' in board[3:6]
+True
+
+>>> board = ['o', 'o', 'o', '3', '4', '5', 'x', 'o', 'x']
+>>> winner_check(wcombos, board)
+('o', [0, 1, 2])
+
+"""
+
+
+import random
+board = ['0', '1', '2', '3', '4', '5', '6', '7', '8']
+wcombos = [[0,1,2], [3,4,5], [6,7,8], [0,4,8],
+           [0,3,6], [1,4,7], [2,5,8], [2,4,6]]
+xtargets = [0,1,2,3,4,5,6,7]
+ytargets = [0,1,2,3,4,5,6,7]
+def show_board():
+    """ Shows TTT board
+
+
+    """
+    for i in range(0,len(board),3):
+        # substitute None for ' ' otherwise use value in array
+        sq = [' ' if sq == None else sq for sq in board[i:i+3]]
+        print(sq[0], '|',sq[1], '|', sq[2])
+
+
+def get_unblocked_sequence(marker, aponent, wcombos, board):
+    """ 
+    Returns a sequence of locations that marker can use to win.
+
+    This function does two things:
+
+    - Returns a sequence of three locations that will result in a win
+      if all are selected, if such a sequence exists. If several
+      combinations are possible, one is chosen at random.
+
+    - If no sequence of three locations can be found, a sequence of
+      available locations is returned instead.
+
+      xtarget and ytargets are a lists that contains the index
+      location of possible winning combinations for the respective
+      marker.
+
+"""
+    t = [0,1,2,3,4,5,6,7,8]
+    while len(t):
+        num = random.choice(range(0,len(t)-1))
+        sequence = wcombos[t.pop(num)]
+        goodtarget = False
+        board_section = [board[i] for i in sequence]
+        if aponent not in board_section:
+            if board_section.count(marker) != 3:
+                goodtarget = True
+                xmark = board.count('x')
+                omark = board.count('o')
+                marks = 9 - (xmark + omark)
+                return sequence, marker
+    b=[]
+    for sq in board:
+        if sq.isdigit(): b.append(sq)
+    return b, marker
+
+def pl_sequence(seq, b):
+
+    """
+"""
+    marker = b
+    exitflag = False
+    while not exitflag:
+        num = int(random.choice(seq))
+        if board[num].isdigit(): exitflag = True
+    board[num] =  marker
+    return board
+
+def winner_check(wcombos, board):
+    """
+    Check for ending combinations of marker
+    
+    
+    """
+
+    winner = None
+    for seq in wcombos:
+        sequence = [board[i] for i in seq ]
+        if sequence.count('x') == 3:
+            winner = 'x'
+            break
+        if sequence.count('o') == 3:
+            winner = 'o'
+            break
+    return winner, seq
+            
+
+#exitflag = False
+#count = 1
+#while not exitflag:
+#    print('x turn')
+#    pl_sequence((get_unblocked_sequence('x', 'o')))
+#    count += 1
+#    show_board()
+#    winner = winner_check()
+#    if winner != None:
+#        exitflag = True
+#        break
+
+#    if count == 8: exitflag = True
+
+#    print('o turn')
+#    pl_sequence((get_unblocked_sequence('o', 'x')))
+#    count += 1
+#    show_board()
+#    winner_check()
+#    winner = winner_check()
+#    if winner != None:
+#        exitflag = True
+#        break
+
+#print('winner is ', winner)
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod(verbose=True)

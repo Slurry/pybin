@@ -1,0 +1,27 @@
+#!/usr/bin/python3.1
+
+import os
+import sys
+import time
+day = 86400 #seconds in a day
+targetDir='/home/jayson/pybin/purgeolder/podcasts-testing' #sys.argv[1]
+daysOld=3 #sys.argv[2]
+now = time.time()
+files=os.walk(targetDir)
+for r, d, f in files:
+    path=str(r) + "/"
+    if len(f) > 1:
+        for item in f:
+            path = path + str(item)
+            ct = os.path.getctime(path)
+            age = now - ct
+            print(path, age / 86400)
+            if age > (day * 1):
+                print(f, 'older')
+                path=str(r) + '/'
+            else:
+                print(f, 'not older')
+
+    
+
+    

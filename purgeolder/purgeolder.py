@@ -1,0 +1,9 @@
+#!/usr/bin/env python3.1
+
+import os
+import sys
+
+workingDirectory = sys.argv[0]
+daysOld = sys.argv[1]
+
+print(sys.argv[2])    

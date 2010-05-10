@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+
+import filecmp
+import urllib
+import os
+home = os.path.expanduser('~')
+
+def save_current_ip():
+    os.chdir(os.path.expanduser('~'))
+    ip = urllib.urlopen('http://whatismyip.org').read()
+    f = open('currentip.txt','w')
+    f.write(ip + "\n")
+    f.close()
+    return ip
+
+if os.path.isfile(home + '/currentip.txt') != True:
+    save_current_ip()
+    os.system('/home/jayson/ipstatus')
+else:
+    lastip = open('/home/jayson/currentip.txt','r').read()
+    currentip = urllib.urlopen('http://whatismyip.org').read()
+    if lastip.strip() != currentip.strip():
+        os.remove('/home/jayson/currentip.txt')
+        save_current_ip()
+        os.system('/home/jayson/ipstatus')
+        print "IP address changed from " + lastip + " to " + currentip
+    else:
+        print "NO CHANGE"
+        

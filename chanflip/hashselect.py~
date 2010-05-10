@@ -1,0 +1,4 @@
+#!/usr/share/python3.1
+
+query_ht = {}
+query_ht['listgenre']="select rowid, genre from genres"

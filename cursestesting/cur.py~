@@ -1,0 +1,13 @@
+#!/usr/bin/env python3.1
+
+import curses
+stdscr = curses.initscr()
+
+curses.noecho()
+curses.cbreak()
+stdscr.keypad(1)
+
+
+curses.nobreak(); stdscr.keypad(0); curses.echo()
+curses.endwin()
+

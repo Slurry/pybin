@@ -1,0 +1,155 @@
+#!/usr/bin/python3.1
+import os
+import sys
+
+english_only = {'1) By Genre':'watch_by_genre_english',
+                '2) By Random':'watchrandomenglish',
+                '3) By Flip':'fliprandomenglish',
+                '99) Back':'back'}
+
+all_languages = {'1) By Random':'watchrandomall',
+                 '2) By Flip':'fliprandomall',
+                 '99) Back':'back'}
+
+watch = {'1) English Stations':english_only,
+         '2) All Stations':all_languages,
+         '99) Back':'back'}
+
+stream_maintenance = {'1) Add Stream':'addstream',
+                      '2) Modify Stream':'modifystream',
+                      '99) Back':'back'}
+
+content_maintenance = {'1) Add Content Info':'add_content_info',
+                       '2) Modify Content Info':'modify_content_info',
+                       '3) Next Non-Content Stream':'next_noncontent',
+                       '99) Back':'back'}
+
+genre_maintenance = {'1) Add Genre':'addgenre',
+                     '99) Back':'back'}
+
+maintenance = {'1) Stream Maintenance':stream_maintenance,
+               '2) Content Maintenance':content_maintenance,
+               '3) Genre Maintenance':genre_maintenance,
+               '99) Back':'back'}
+
+menu = {'1) Watch':watch,'2) Maintenance':maintenance, '99) Quit':'sys.exit(1)'}
+
+def show_menu(level = menu):
+    
+    menupath=[level]
+    exitflag = False
+    index = 0
+    title = 'Menu'
+    while not exitflag:
+        index = len(menupath) - 1
+        menu_level = menupath[index]
+        menu_list = sorted(menu_level)
+        print('----', title, '------')
+        for i in menu_list:
+            print(i)
+        print('----------')
+        menu_choice = input('Choice -> ')
+        # Get key that matches menu_choice
+        try:
+            menu_item = [key for key in menu_level if menu_choice in key][0]
+            title = str(menu_item).strip('123456789) ')
+        except:
+            # if input causes an error setup to return to main menu
+            menupath=[menu, watch]
+            menu_level = watch
+            menu_choice = 'back'
+            menu_item = [key for key in menu_level if menu_choice in key][0]
+        # if menu_item is a dict, there is another level of menus
+        if type(menu_level[menu_item]) == dict:
+            menupath.append(menu_level[menu_item])
+        elif menu_level[menu_item] == 'back':
+            menupath.pop()
+        else:
+                      return menu_level[menu_item]
+        # ADD back to menu items to move back through menus
+        
+
+def next_noncontent():
+    print('Show Next 10 Streams Without Content Descriptions:')
+    #query = query_base + streams_wo_content
+    os.system(mysqlcmd.format(streams_wo_content))
+
+def add_content_info():
+    print('Add Content Description For A Stream')
+    content_title = input('Show Title [no content]-> ')
+    if content_title == '': content_title = 'no content'
+    content_media_type = input('Media Type [video] ->')
+    if content_media_type == '': content_media_type = 'video'
+    content_genre = input('Show Genre [no content] ->')
+    if content_genre == '' : content_genre = 'no content'
+    content_is_english = input('English Content [false] ->')
+    if content_is_english == '' :
+        content_is_english = 0
+    else:
+        content_is_english = 1
+    stream_name = input('Stream name [name] -> ')
+    if stream_name == '' : stream_name = 'name?'
+    content_url = input('Content URL ->')
+    query = add_content.format(content_title, content_media_type,
+                               content_genre, content_is_english, content_url)
+    #query = query_base + query_prep
+    os.system(mysqlcmd.format(query))
+    #verify_query_prep = verify_content.format(content_url)
+    #verify_query = query_base + verify_query_prep
+    #os.system(verify_query)
+    query2 = update_stream_name.format(stream_name, content_url)
+    #query = query_base + query2_prep
+    os.system(mysqlcmd.format(query2))
+                                    
+def modify_content_info():
+    mod_url = input('URL of content to modify -> ')
+    query = delete_content.format(mod_url)
+    #query = query_base + query_prep
+    # delete current url Content
+    os.system(mysqlcmd(query))
+    add_content_info()
+
+def watch_by_genre_english():
+    pass
+
+
+# setup base for query
+mysqlcmd = 'mysql -uroot -p10l29i38f47e olmedia -e {0} '
+
+# queries section
+streams_wo_content = """ "select url 
+from streams str 
+where url not in 
+(select fk_streams_url as url from content) limit 10;" | sed "s/|//" """
+
+add_content = ' "insert into content\
+(title, fk_mediaType_mtyp, fk_genreType_gtyp, english, fk_streams_url)\
+values(\'{0}\', \'{1}\', \'{2}\', \'{3}\', \'{4}\')" '
+
+
+verify_content = ' " select title, fk_mediaType_mtyp, fk_genreType_gtyp, english\
+from content where fk_streams_url = \'{4}\'; " '
+
+delete_content = ' "delete from content where fk_streams_url = \'{0}\' " '
+
+update_stream_name = ' "update streams \
+set name = \'{0}\' \
+where url = \'{1}\'; " '
+
+genre_list = '" select * from genre;"'
+
+while 1:
+    try:
+        request = show_menu()
+    except:
+        continue
+    # prep commad fro evaluation
+    command_string = request + '()'
+    command = command_string
+    #try:
+    eval(command)
+    #except NameError:
+     #   print('***-> NOT IMPLIMENTED <-***')
+    
+
+

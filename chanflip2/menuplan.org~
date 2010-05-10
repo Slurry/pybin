@@ -1,0 +1,52 @@
+* watch
+** english only
+*** by genre
+**** christian
+     listchristiangenre
+**** education
+     listeducationgenre
+**** local gov
+     listlocalgovgenre
+**** movies
+     listmoviesgenre
+**** music videos
+     listmusicvideosgenre
+**** national gov
+     listnationalgovgenre
+**** news
+     listnewsgenre
+**** other
+     listothergenre
+**** politics
+     listpoliticsgenre
+**** serial
+     listserialgenre
+**** sports
+     listsportsgenre
+**** weather
+     listweathergenre
+*** by random
+    tunerandomenglish
+*** by flip
+    fliprandomenglish
+** all languages
+* listen
+* maintenance
+
+
+gtyp         |
++--------------+
+| christian    |
+| education    |
+| local gov    |
+| movies       |
+| music videos |
+| national gov |
+| news         |
+| no content   |
+| other        |
+| politics     |
+| serial       |
+| sports       |
+| unknown      |
+| weather   

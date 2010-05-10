@@ -1,0 +1,15 @@
+#!/usr/bin/python3.1
+
+#import sqlite3
+import menumaker
+#import queryhash
+#con = sqlite3.connect('/home/jayson/streams/streamtest.db')
+#curs = con.cursor()
+
+
+request = menumaker.show_menu()
+#eval(querhhash.query_ht[request])
+
+
+
+

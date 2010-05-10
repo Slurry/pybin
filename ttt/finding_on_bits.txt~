@@ -1,0 +1,1768 @@
+>>>   C-c C-c
+KeyboardInterrupt
+>>> Traceback (most recent call last):
+  File "/tmp/py3554YpH", line 14, in <module>
+    show_board()
+  File "/tmp/py3554YpH", line 9, in show_board
+    for i in board.length():
+AttributeError: 'list' object has no attribute 'length'
+>>> Traceback (most recent call last):
+  File "/tmp/py3554lzN", line 14, in <module>
+    show_board()
+  File "/tmp/py3554lzN", line 9, in show_board
+    for i in board.len():
+AttributeError: 'list' object has no attribute 'len'
+>>> a
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a' is not defined
+>>> a=[1,2,3]
+>>> dir(a)
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__delslice__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getslice__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__setslice__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> a.count()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: count() takes exactly one argument (0 given)
+>>> a.count
+<built-in method count of list object at 0x914e78c>
+>>> b='fjdk'
+>>> b.length(0
+... )
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'length'
+>>> b.len()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'len'
+>>> dir(b)
+['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+>>> a
+[1, 2, 3]
+>>> a.size()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'size'
+>>> dir(a)
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__delslice__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getslice__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__setslice__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> help(a.count)
+Help on built-in function count:
+
+count(...)
+    L.count(value) -> integer -- return number of occurrences of value
+
+>>> help(list)
+Help on class list in module __builtin__:
+
+class list(object)
+ |  list() -> new list
+ |  list(sequence) -> new list initialized from sequence's items
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(...)
+ |      x.__add__(y) <==> x+y
+ |  
+ |  __contains__(...)
+ |      x.__contains__(y) <==> y in x
+ |  
+ |  __delitem__(...)
+ |      x.__delitem__(y) <==> del x[y]
+ |  
+ |  __delslice__(...)
+ |      x.__delslice__(i, j) <==> del x[i:j]
+ |      
+ |      Use of negative indices is not supported.
+ |  
+ |  __eq__(...)
+ |      x.__eq__(y) <==> x==y
+ |  
+ |  __ge__(...)
+ |      x.__ge__(y) <==> x>=y
+ |  
+ |  __getattribute__(...)
+ |      x.__getattribute__('name') <==> x.name
+ |  
+ |  __getitem__(...)
+ |      x.__getitem__(y) <==> x[y]
+ |  
+ |  __getslice__(...)
+ |      x.__getslice__(i, j) <==> x[i:j]
+ |      
+ |      Use of negative indices is not supported.
+ |  
+ |  __gt__(...)
+ |      x.__gt__(y) <==> x>y
+ |  
+ |  __iadd__(...)
+ |      x.__iadd__(y) <==> x+=y
+ |  
+ |  __imul__(...)
+ |      x.__imul__(y) <==> x*=y
+ |  
+ |  __init__(...)
+ |      x.__init__(...) initializes x; see x.__class__.__doc__ for signature
+ |  
+ |  __iter__(...)
+ |      x.__iter__() <==> iter(x)
+ |  
+ |  __le__(...)
+ |      x.__le__(y) <==> x<=y
+ |  
+ |  __len__(...)
+ |      x.__len__() <==> len(x)
+ |  
+ |  __lt__(...)
+ |      x.__lt__(y) <==> x<y
+ |  
+ |  __mul__(...)
+ |      x.__mul__(n) <==> x*n
+ |  
+ |  __ne__(...)
+ |      x.__ne__(y) <==> x!=y
+ |  
+ |  __repr__(...)
+ |      x.__repr__() <==> repr(x)
+ |  
+ |  __reversed__(...)
+ |      L.__reversed__() -- return a reverse iterator over the list
+ |  
+ |  __rmul__(...)
+ |      x.__rmul__(n) <==> n*x
+ |  
+ |  __setitem__(...)
+ |      x.__setitem__(i, y) <==> x[i]=y
+ |  
+ |  __setslice__(...)
+ |      x.__setslice__(i, j, y) <==> x[i:j]=y
+ |      
+ |      Use  of negative indices is not supported.
+ |  
+ |  __sizeof__(...)
+ |      L.__sizeof__() -- size of L in memory, in bytes
+ |  
+ |  append(...)
+ |      L.append(object) -- append object to end
+ |  
+ |  count(...)
+ |      L.count(value) -> integer -- return number of occurrences of value
+ |  
+ |  extend(...)
+ |      L.extend(iterable) -- extend list by appending elements from the iterable
+ |  
+ |  index(...)
+ |      L.index(value, [start, [stop]]) -> integer -- return first index of value.
+ |      Raises ValueError if the value is not present.
+ |  
+ |  insert(...)
+ |      L.insert(index, object) -- insert object before index
+ |  
+ |  pop(...)
+ |      L.pop([index]) -> item -- remove and return item at index (default last).
+ |      Raises IndexError if list is empty or index is out of range.
+ |  
+ |  remove(...)
+ |      L.remove(value) -- remove first occurrence of value.
+ |      Raises ValueError if the value is not present.
+ |  
+ |  reverse(...)
+ |      L.reverse() -- reverse *IN PLACE*
+ |  
+ |  sort(...)
+ |      L.sort(cmp=None, key=None, reverse=False) -- stable sort *IN PLACE*;
+ |      cmp(x, y) -> -1, 0, 1
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __hash__ = None
+ |  
+ |  __new__ = <built-in method __new__ of type object at 0x8221e40>
+ |      T.__new__(S, ...) -> a new object with type S, a subtype of T
+
+>>>help(list)
+Help on class list in module __builtin__:
+
+class list(object)
+ |  list() -> new list
+ |  list(sequence) -> new list initialized from sequence's items
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(...)
+ |      x.__add__(y) <==> x+y
+ |  
+ |  __contains__(...)
+ |      x.__contains__(y) <==> y in x
+ |  
+ |  __delitem__(...)
+ |      x.__delitem__(y) <==> del x[y]
+ |  
+ |  __delslice__(...)
+ |      x.__delslice__(i, j) <==> del x[i:j]
+ |      
+ |      Use of negative indices is not supported.
+ |  
+ |  __eq__(...)
+ |      x.__eq__(y) <==> x==y
+ |  
+ |  __ge__(...)
+ |      x.__ge__(y) <==> x>=y
+ |  
+ |  __getattribute__(...)
+ |      x.__getattribute__('name') <==> x.name
+ |  
+ |  __getitem__(...)
+ |      x.__getitem__(y) <==> x[y]
+ |  
+ |  __getslice__(...)
+ |      x.__getslice__(i, j) <==> x[i:j]
+ |      
+ |      Use of negative indices is not supported.
+ |  
+ |  __gt__(...)
+ |      x.__gt__(y) <==> x>y
+ |  
+ |  __iadd__(...)
+ |      x.__iadd__(y) <==> x+=y
+ |  
+ |  __imul__(...)
+ |      x.__imul__(y) <==> x*=y
+ |  
+ |  __init__(...)
+ |      x.__init__(...) initializes x; see x.__class__.__doc__ for signature
+ |  
+ |  __iter__(...)
+ |      x.__iter__() <==> iter(x)
+ |  
+ |  __le__(...)
+ |      x.__le__(y) <==> x<=y
+ |  
+ |  __len__(...)
+ |      x.__len__() <==> len(x)
+ |  
+ |  __lt__(...)
+ |      x.__lt__(y) <==> x<y
+ |  
+ |  __mul__(...)
+ |      x.__mul__(n) <==> x*n
+ |  
+ |  __ne__(...)
+ |      x.__ne__(y) <==> x!=y
+ |  
+ |  __repr__(...)
+ |      x.__repr__() <==> repr(x)
+ |  
+ |  __reversed__(...)
+ |      L.__reversed__() -- return a reverse iterator over the list
+ |  
+ |  __rmul__(...)
+ |      x.__rmul__(n) <==> n*x
+ |  
+ |  __setitem__(...)
+ |      x.__setitem__(i, y) <==> x[i]=y
+ |  
+ |  __setslice__(...)
+ |      x.__setslice__(i, j, y) <==> x[i:j]=y
+ |      
+ |      Use  of negative indices is not supported.
+ |  
+ |  __sizeof__(...)
+ |      L.__sizeof__() -- size of L in memory, in bytes
+ |  
+ |  append(...)
+ |      L.append(object) -- append object to end
+ |  
+ |  count(...)
+ |      L.count(value) -> integer -- return number of occurrences of value
+ |  
+ |  extend(...)
+ |      L.extend(iterable) -- extend list by appending elements from the iterable
+ |  
+ |  index(...)
+ |      L.index(value, [start, [stop]]) -> integer -- return first index of value.
+ |      Raises ValueError if the value is not present.
+ |  
+ |  insert(...)
+ |      L.insert(index, object) -- insert object before index
+ |  
+ |  pop(...)
+ |      L.pop([index]) -> item -- remove and return item at index (default last).
+ |      Raises IndexError if list is empty or index is out of range.
+ |  
+ |  remove(...)
+ |      L.remove(value) -- remove first occurrence of value.
+ |      Raises ValueError if the value is not present.
+ |  
+ |  reverse(...)
+ |      L.reverse() -- reverse *IN PLACE*
+ |  
+ |  sort(...)
+ |      L.sort(cmp=None, key=None, reverse=False) -- stable sort *IN PLACE*;
+ |      cmp(x, y) -> -1, 0, 1
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __hash__ = None
+ |  
+ |  __new__ = <built-in method __new__ of type object at 0x8221e40>
+ |      T.__new__(S, ...) -> a new object with type S, a subtype of T
+
+>>> help(list)|less
+Help on class list in module __builtin__:
+
+class list(object)
+ |  list() -> new list
+ |  list(sequence) -> new list initialized from sequence's items
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(...)
+ |      x.__add__(y) <==> x+y
+ |  
+ |  __contains__(...)
+ |      x.__contains__(y) <==> y in x
+ |  
+ |  __delitem__(...)
+ |      x.__delitem__(y) <==> del x[y]
+ |  
+ |  __delslice__(...)
+ |      x.__delslice__(i, j) <==> del x[i:j]
+ |      
+ |      Use of negative indices is not supported.
+ |  
+ |  __eq__(...)
+ |      x.__eq__(y) <==> x==y
+ |  
+ |  __ge__(...)
+ |      x.__ge__(y) <==> x>=y
+ |  
+ |  __getattribute__(...)
+ |      x.__getattribute__('name') <==> x.name
+ |  
+ |  __getitem__(...)
+ |      x.__getitem__(y) <==> x[y]
+ |  
+ |  __getslice__(...)
+ |      x.__getslice__(i, j) <==> x[i:j]
+ |      
+ |      Use of negative indices is not supported.
+ |  
+ |  __gt__(...)
+ |      x.__gt__(y) <==> x>y
+ |  
+ |  __iadd__(...)
+ |      x.__iadd__(y) <==> x+=y
+ |  
+ |  __imul__(...)
+ |      x.__imul__(y) <==> x*=y
+ |  
+ |  __init__(...)
+ |      x.__init__(...) initializes x; see x.__class__.__doc__ for signature
+ |  
+ |  __iter__(...)
+ |      x.__iter__() <==> iter(x)
+ |  
+ |  __le__(...)
+ |      x.__le__(y) <==> x<=y
+ |  
+ |  __len__(...)
+ |      x.__len__() <==> len(x)
+ |  
+ |  __lt__(...)
+ |      x.__lt__(y) <==> x<y
+ |  
+ |  __mul__(...)
+ |      x.__mul__(n) <==> x*n
+ |  
+ |  __ne__(...)
+ |      x.__ne__(y) <==> x!=y
+ |  
+ |  __repr__(...)
+ |      x.__repr__() <==> repr(x)
+ |  
+ |  __reversed__(...)
+ |      L.__reversed__() -- return a reverse iterator over the list
+ |  
+ |  __rmul__(...)
+ |      x.__rmul__(n) <==> n*x
+ |  
+ |  __setitem__(...)
+ |      x.__setitem__(i, y) <==> x[i]=y
+ |  
+ |  __setslice__(...)
+ |      x.__setslice__(i, j, y) <==> x[i:j]=y
+ |      
+ |      Use  of negative indices is not supported.
+ |  
+ |  __sizeof__(...)
+ |      L.__sizeof__() -- size of L in memory, in bytes
+ |  
+ |  append(...)
+ |      L.append(object) -- append object to end
+ |  
+ |  count(...)
+ |      L.count(value) -> integer -- return number of occurrences of value
+ |  
+ |  extend(...)
+ |      L.extend(iterable) -- extend list by appending elements from the iterable
+ |  
+ |  index(...)
+ |      L.index(value, [start, [stop]]) -> integer -- return first index of value.
+ |      Raises ValueError if the value is not present.
+ |  
+ |  insert(...)
+ |      L.insert(index, object) -- insert object before index
+ |  
+ |  pop(...)
+ |      L.pop([index]) -> item -- remove and return item at index (default last).
+ |      Raises IndexError if list is empty or index is out of range.
+ |  
+ |  remove(...)
+ |      L.remove(value) -- remove first occurrence of value.
+ |      Raises ValueError if the value is not present.
+ |  
+ |  reverse(...)
+ |      L.reverse() -- reverse *IN PLACE*
+ |  
+ |  sort(...)
+ |      L.sort(cmp=None, key=None, reverse=False) -- stable sort *IN PLACE*;
+ |      cmp(x, y) -> -1, 0, 1
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __hash__ = None
+ |  
+ |  __new__ = <built-in method __new__ of type object at 0x8221e40>
+ |      T.__new__(S, ...) -> a new object with type S, a subtype of T
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'less' is not defined
+>>> dir(list)
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__delslice__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getslice__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__setslice__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> sir(string)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'sir' is not defined
+>>> dir(string)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'string' is not defined
+>>> dir(str)
+['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+>>> length(a)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'length' is not defined
+>>> len
+<built-in function len>
+>>> len(a)
+3
+>>> Traceback (most recent call last):
+  File "/tmp/py3554y9T", line 14, in <module>
+    show_board()
+  File "/tmp/py3554y9T", line 9, in show_board
+    for i in len(board):
+TypeError: 'int' object is not iterable
+>>> None
+None
+None
+()
+None
+None
+None
+()
+None
+None
+None
+>>> board
+[None, None, None, None, None, None, None, None, None]
+>>> len(board)
+9
+>>> range(0,len(board))
+[0, 1, 2, 3, 4, 5, 6, 7, 8]
+>>> (0, None)
+(1, None)
+(2, None)
+()
+(3, None)
+(4, None)
+(5, None)
+()
+(6, None)
+(7, None)
+(8, None)
+>>> help(range)
+Help on built-in function range in module __builtin__:
+
+range(...)
+    range([start,] stop[, step]) -> list of integers
+    
+    Return a list containing an arithmetic progression of integers.
+    range(i, j) returns [i, i+1, i+2, ..., j-1]; start (!) defaults to 0.
+    When step is given, it specifies the increment (or decrement).
+    For example, range(4) returns [0, 1, 2, 3].  The end point is omitted!
+    These are exactly the valid indices for a list of 4 elements.
+
+>>> range(0,len(board),3)
+[0, 3, 6]
+>>> (None, '|', None, '|', None)
+(None, '|', None, '|', None)
+(None, '|', None, '|', None)
+>>> ('\n', None, '|', None, '|', None)
+('\n', None, '|', None, '|', None)
+('\n', None, '|', None, '|', None)
+>>> ()
+(None, '|', None, '|', None)
+(None, '|', None, '|', None)
+(None, '|', None, '|', None)
+>>> ()
+(' ', '|', None, '|', None)
+(' ', '|', None, '|', None)
+(' ', '|', None, '|', None)
+>>> board[0:3]
+[None, None, None]
+>>> i
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'i' is not defined
+>>> i=0
+>>> board[range(0,i)]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list indices must be integers, not list
+>>> board[i:i+3]
+[None, None, None]
+>>> [sq = ' ' if sq = None else sq for sq in board[i:i+3]]
+  File "<stdin>", line 1
+    [sq = ' ' if sq = None else sq for sq in board[i:i+3]]
+        ^
+SyntaxError: invalid syntax
+>>>     [sq = ' ' if sq = None else sq for sq in board[i:i+3]]
+  File "<stdin>", line 1
+    [sq = ' ' if sq = None else sq for sq in board[i:i+3]]
+    ^
+IndentationError: unexpected indent
+>>> [(sq = ' ' if sq = None else sq) for sq in board[i:i+3]]
+  File "<stdin>", line 1
+    [(sq = ' ' if sq = None else sq) for sq in board[i:i+3]]
+         ^
+SyntaxError: invalid syntax
+>>> [[sq = ' ' if sq = None else sq] for sq in board[i:i+3]]
+  File "<stdin>", line 1
+    [[sq = ' ' if sq = None else sq] for sq in board[i:i+3]]
+         ^
+SyntaxError: invalid syntax
+>>> [sq = ' ' if sq == None else sq for sq in board[i:i+3]]
+  File "<stdin>", line 1
+    [sq = ' ' if sq == None else sq for sq in board[i:i+3]]
+        ^
+SyntaxError: invalid syntax
+>>> [sq if sq != None else None for sq in board[i:i+3]]
+[None, None, None]
+>>> [sq if sq != None else None for sq in board[i:i+3]]
+[None, None, None]
+>>> [' ' if sq == None else sq for sq in board[i:i+3]]
+[' ', ' ', ' ']
+>>> board[0] = 'x'
+>>> [sq if sq != None else None for sq in board[i:i+3]]
+['x', None, None]
+>>> [' ' if sq == None else sq for sq in board[i:i+3]]
+['x', ' ', ' ']
+>>> ()
+Traceback (most recent call last):
+  File "/tmp/py3554yEI", line 16, in <module>
+    show_board()
+  File "/tmp/py3554yEI", line 12, in show_board
+    print(sq1, '|', board[i + 1], '|', board[i + 2])
+NameError: global name 'sq1' is not defined
+>>> ()
+(' ', '|', None, '|', None)
+(' ', '|', None, '|', None)
+(' ', '|', None, '|', None)
+>>> ()
+(' ', '|', ' ', '|', ' ')
+(' ', '|', ' ', '|', ' ')
+(' ', '|', ' ', '|', ' ')
+>>> ()
+('x', '|', ' ', '|', ' ')
+(' ', '|', 'x', '|', ' ')
+(' ', '|', ' ', '|', 'x')
+>>> ()
+('x', '|', ' ', '|', ' ')
+()
+(' ', '|', 'x', '|', ' ')
+()
+(' ', '|', ' ', '|', 'x')
+()
+>>> bin(24)
+'0b11000'
+>>> a=bin(24)
+>>> a.count(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: expected a character buffer object
+>>> a.count('1')
+2
+>>> a.index('1')
+2
+>>> help(str)
+Help on class str in module __builtin__:
+
+class str(basestring)
+ |  str(object) -> string
+ |  
+ |  Return a nice string representation of the object.
+ |  If the argument is a string, the return value is the same object.
+ |  
+ |  Method resolution order:
+ |      str
+ |      basestring
+ |      object
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(...)
+ |      x.__add__(y) <==> x+y
+ |  
+ |  __contains__(...)
+ |      x.__contains__(y) <==> y in x
+ |  
+ |  __eq__(...)
+ |      x.__eq__(y) <==> x==y
+ |  
+ |  __format__(...)
+ |      S.__format__(format_spec) -> unicode
+ |  
+ |  __ge__(...)
+ |      x.__ge__(y) <==> x>=y
+ |  
+ |  __getattribute__(...)
+ |      x.__getattribute__('name') <==> x.name
+ |  
+ |  __getitem__(...)
+ |      x.__getitem__(y) <==> x[y]
+ |  
+ |  __getnewargs__(...)
+ |  
+ |  __getslice__(...)
+ |      x.__getslice__(i, j) <==> x[i:j]
+ |      
+ |      Use of negative indices is not supported.
+ |  
+ |  __gt__(...)
+ |      x.__gt__(y) <==> x>y
+ |  
+ |  __hash__(...)
+ |      x.__hash__() <==> hash(x)
+ |  
+ |  __le__(...)
+ |      x.__le__(y) <==> x<=y
+ |  
+ |  __len__(...)
+ |      x.__len__() <==> len(x)
+ |  
+ |  __lt__(...)
+ |      x.__lt__(y) <==> x<y
+ |  
+ |  __mod__(...)
+ |      x.__mod__(y) <==> x%y
+ |  
+ |  __mul__(...)
+ |      x.__mul__(n) <==> x*n
+ |  
+ |  __ne__(...)
+ |      x.__ne__(y) <==> x!=y
+ |  
+ |  __repr__(...)
+ |      x.__repr__() <==> repr(x)
+ |  
+ |  __rmod__(...)
+ |      x.__rmod__(y) <==> y%x
+ |  
+ |  __rmul__(...)
+ |      x.__rmul__(n) <==> n*x
+ |  
+ |  __sizeof__(...)
+ |      S.__sizeof__() -> size of S in memory, in bytes
+ |  
+ |  __str__(...)
+ |      x.__str__() <==> str(x)
+ |  
+ |  capitalize(...)
+ |      S.capitalize() -> string
+ |      
+ |      Return a copy of the string S with only its first character
+ |      capitalized.
+ |  
+ |  center(...)
+ |      S.center(width[, fillchar]) -> string
+ |      
+ |      Return S centered in a string of length width. Padding is
+ |      done using the specified fill character (default is a space)
+ |  
+ |  count(...)
+ |      S.count(sub[, start[, end]]) -> int
+ |      
+ |      Return the number of non-overlapping occurrences of substring sub in
+ |      string S[start:end].  Optional arguments start and end are interpreted
+ |      as in slice notation.
+ |  
+ |  decode(...)
+ |      S.decode([encoding[,errors]]) -> object
+ |      
+ |      Decodes S using the codec registered for encoding. encoding defaults
+ |      to the default encoding. errors may be given to set a different error
+ |      handling scheme. Default is 'strict' meaning that encoding errors raise
+ |      a UnicodeDecodeError. Other possible values are 'ignore' and 'replace'
+ |      as well as any other name registered with codecs.register_error that is
+ |      able to handle UnicodeDecodeErrors.
+ |  
+ |  encode(...)
+ |      S.encode([encoding[,errors]]) -> object
+ |      
+ |      Encodes S using the codec registered for encoding. encoding defaults
+ |      to the default encoding. errors may be given to set a different error
+ |      handling scheme. Default is 'strict' meaning that encoding errors raise
+ |      a UnicodeEncodeError. Other possible values are 'ignore', 'replace' and
+ |      'xmlcharrefreplace' as well as any other name registered with
+ |      codecs.register_error that is able to handle UnicodeEncodeErrors.
+ |  
+ |  endswith(...)
+ |      S.endswith(suffix[, start[, end]]) -> bool
+ |      
+ |      Return True if S ends with the specified suffix, False otherwise.
+ |      With optional start, test S beginning at that position.
+ |      With optional end, stop comparing S at that position.
+ |      suffix can also be a tuple of strings to try.
+ |  
+ |  expandtabs(...)
+ |      S.expandtabs([tabsize]) -> string
+ |      
+ |      Return a copy of S where all tab characters are expanded using spaces.
+ |      If tabsize is not given, a tab size of 8 characters is assumed.
+ |  
+ |  find(...)
+ |      S.find(sub [,start [,end]]) -> int
+ |      
+ |      Return the lowest index in S where substring sub is found,
+ |      such that sub is contained within s[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Return -1 on failure.
+ |  
+ |  format(...)
+ |      S.format(*args, **kwargs) -> unicode
+ |  
+ |  index(...)
+ |      S.index(sub [,start [,end]]) -> int
+ |      
+ |      Like S.find() but raise ValueError when the substring is not found.
+ |  
+ |  isalnum(...)
+ |      S.isalnum() -> bool
+ |      
+ |      Return True if all characters in S are alphanumeric
+ |      and there is at least one character in S, False otherwise.
+ |  
+ |  isalpha(...)
+ |      S.isalpha() -> bool
+ |      
+ |      Return True if all characters in S are alphabetic
+ |      and there is at least one character in S, False otherwise.
+ |  
+ |  isdigit(...)
+ |      S.isdigit() -> bool
+ |      
+ |      Return True if all characters in S are digits
+ |      and there is at least one character in S, False otherwise.
+ |  
+ |  islower(...)
+ |      S.islower() -> bool
+ |      
+ |      Return True if all cased characters in S are lowercase and there is
+ |      at least one cased character in S, False otherwise.
+ |  
+ |  isspace(...)
+ |      S.isspace() -> bool
+ |      
+ |      Return True if all characters in S are whitespace
+ |      and there is at least one character in S, False otherwise.
+ |  
+ |  istitle(...)
+ |      S.istitle() -> bool
+ |      
+ |      Return True if S is a titlecased string and there is at least one
+ |      character in S, i.e. uppercase characters may only follow uncased
+ |      characters and lowercase characters only cased ones. Return False
+ |      otherwise.
+ |  
+ |  isupper(...)
+ |      S.isupper() -> bool
+ |      
+ |      Return True if all cased characters in S are uppercase and there is
+ |      at least one cased character in S, False otherwise.
+ |  
+ |  join(...)
+ |      S.join(sequence) -> string
+ |      
+ |      Return a string which is the concatenation of the strings in the
+ |      sequence.  The separator between elements is S.
+ |  
+ |  ljust(...)
+ |      S.ljust(width[, fillchar]) -> string
+ |      
+ |      Return S left-justified in a string of length width. Padding is
+ |      done using the specified fill character (default is a space).
+ |  
+ |  lower(...)
+ |      S.lower() -> string
+ |      
+ |      Return a copy of the string S converted to lowercase.
+ |  
+ |  lstrip(...)
+ |      S.lstrip([chars]) -> string or unicode
+ |      
+ |      Return a copy of the string S with leading whitespace removed.
+ |      If chars is given and not None, remove characters in chars instead.
+ |      If chars is unicode, S will be converted to unicode before stripping
+ |  
+ |  partition(...)
+ |      S.partition(sep) -> (head, sep, tail)
+ |      
+ |      Search for the separator sep in S, and return the part before it,
+ |      the separator itself, and the part after it.  If the separator is not
+ |      found, return S and two empty strings.
+ |  
+ |  replace(...)
+ |      S.replace (old, new[, count]) -> string
+ |      
+ |      Return a copy of string S with all occurrences of substring
+ |      old replaced by new.  If the optional argument count is
+ |      given, only the first count occurrences are replaced.
+ |  
+ |  rfind(...)
+ |      S.rfind(sub [,start [,end]]) -> int
+ |      
+ |      Return the highest index in S where substring sub is found,
+ |      such that sub is contained within s[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Return -1 on failure.
+ |  
+ |  rindex(...)
+ |      S.rindex(sub [,start [,end]]) -> int
+ |      
+ |      Like S.rfind() but raise ValueError when the substring is not found.
+ |  
+ |  rjust(...)
+ |      S.rjust(width[, fillchar]) -> string
+ |      
+ |      Return S right-justified in a string of length width. Padding is
+ |      done using the specified fill character (default is a space)
+ |  
+ |  rpartition(...)
+ |      S.rpartition(sep) -> (tail, sep, head)
+ |      
+ |      Search for the separator sep in S, starting at the end of S, and return
+ |      the part before it, the separator itself, and the part after it.  If the
+ |      separator is not found, return two empty strings and S.
+ |  
+ |  rsplit(...)
+ |      S.rsplit([sep [,maxsplit]]) -> list of strings
+ |      
+ |      Return a list of the words in the string S, using sep as the
+ |      delimiter string, starting at the end of the string and working
+ |      to the front.  If maxsplit is given, at most maxsplit splits are
+ |      done. If sep is not specified or is None, any whitespace string
+ |      is a separator.
+ |  
+ |  rstrip(...)
+ |      S.rstrip([chars]) -> string or unicode
+ |      
+ |      Return a copy of the string S with trailing whitespace removed.
+ |      If chars is given and not None, remove characters in chars instead.
+ |      If chars is unicode, S will be converted to unicode before stripping
+ |  
+ |  split(...)
+ |      S.split([sep [,maxsplit]]) -> list of strings
+ |      
+ |      Return a list of the words in the string S, using sep as the
+ |      delimiter string.  If maxsplit is given, at most maxsplit
+ |      splits are done. If sep is not specified or is None, any
+ |      whitespace string is a separator and empty strings are removed
+ |      from the result.
+ |  
+ |  splitlines(...)
+ |      S.splitlines([keepends]) -> list of strings
+ |      
+ |      Return a list of the lines in S, breaking at line boundaries.
+ |      Line breaks are not included in the resulting list unless keepends
+ |      is given and true.
+ |  
+ |  startswith(...)
+ |      S.startswith(prefix[, start[, end]]) -> bool
+ |      
+ |      Return True if S starts with the specified prefix, False otherwise.
+ |      With optional start, test S beginning at that position.
+ |      With optional end, stop comparing S at that position.
+ |      prefix can also be a tuple of strings to try.
+ |  
+ |  strip(...)
+ |      S.strip([chars]) -> string or unicode
+ |      
+ |      Return a copy of the string S with leading and trailing
+ |      whitespace removed.
+ |      If chars is given and not None, remove characters in chars instead.
+ |      If chars is unicode, S will be converted to unicode before stripping
+ |  
+ |  swapcase(...)
+ |      S.swapcase() -> string
+ |      
+ |      Return a copy of the string S with uppercase characters
+ |      converted to lowercase and vice versa.
+ |  
+ |  title(...)
+ |      S.title() -> string
+ |      
+ |      Return a titlecased version of S, i.e. words start with uppercase
+ |      characters, all remaining cased characters have lowercase.
+ |  
+ |  translate(...)
+ |      S.translate(table [,deletechars]) -> string
+ |      
+ |      Return a copy of the string S, where all characters occurring
+ |      in the optional argument deletechars are removed, and the
+ |      remaining characters have been mapped through the given
+ |      translation table, which must be a string of length 256.
+ |  
+ |  upper(...)
+ |      S.upper() -> string
+ |      
+ |      Return a copy of the string S converted to uppercase.
+ |  
+ |  zfill(...)
+ |      S.zfill(width) -> string
+ |      
+ |      Pad a numeric string S with zeros on the left, to fill a field
+ |      of the specified width.  The string S is never truncated.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __new__ = <built-in method __new__ of type object at 0x82258e0>
+ |      T.__new__(S, ...) -> a new object with type S, a subtype of T
+
+>>> dir(str)
+['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+>>> help(str.find)
+Help on method_descriptor:
+
+find(...)
+    S.find(sub [,start [,end]]) -> int
+    
+    Return the lowest index in S where substring sub is found,
+    such that sub is contained within s[start:end].  Optional
+    arguments start and end are interpreted as in slice notation.
+    
+    Return -1 on failure.
+
+>>> help(str.rfind)
+Help on method_descriptor:
+
+rfind(...)
+    S.rfind(sub [,start [,end]]) -> int
+    
+    Return the highest index in S where substring sub is found,
+    such that sub is contained within s[start:end].  Optional
+    arguments start and end are interpreted as in slice notation.
+    
+    Return -1 on failure.
+
+>>> help(str)
+Help on class str in module __builtin__:
+
+class str(basestring)
+ |  str(object) -> string
+ |  
+ |  Return a nice string representation of the object.
+ |  If the argument is a string, the return value is the same object.
+ |  
+ |  Method resolution order:
+ |      str
+ |      basestring
+ |      object
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(...)
+ |      x.__add__(y) <==> x+y
+ |  
+ |  __contains__(...)
+ |      x.__contains__(y) <==> y in x
+ |  
+ |  __eq__(...)
+ |      x.__eq__(y) <==> x==y
+ |  
+ |  __format__(...)
+ |      S.__format__(format_spec) -> unicode
+ |  
+ |  __ge__(...)
+ |      x.__ge__(y) <==> x>=y
+ |  
+ |  __getattribute__(...)
+ |      x.__getattribute__('name') <==> x.name
+ |  
+ |  __getitem__(...)
+ |      x.__getitem__(y) <==> x[y]
+ |  
+ |  __getnewargs__(...)
+ |  
+ |  __getslice__(...)
+ |      x.__getslice__(i, j) <==> x[i:j]
+ |      
+ |      Use of negative indices is not supported.
+ |  
+ |  __gt__(...)
+ |      x.__gt__(y) <==> x>y
+ |  
+ |  __hash__(...)
+ |      x.__hash__() <==> hash(x)
+ |  
+ |  __le__(...)
+ |      x.__le__(y) <==> x<=y
+ |  
+ |  __len__(...)
+ |      x.__len__() <==> len(x)
+ |  
+ |  __lt__(...)
+ |      x.__lt__(y) <==> x<y
+ |  
+ |  __mod__(...)
+ |      x.__mod__(y) <==> x%y
+ |  
+ |  __mul__(...)
+ |      x.__mul__(n) <==> x*n
+ |  
+ |  __ne__(...)
+ |      x.__ne__(y) <==> x!=y
+ |  
+ |  __repr__(...)
+ |      x.__repr__() <==> repr(x)
+ |  
+ |  __rmod__(...)
+ |      x.__rmod__(y) <==> y%x
+ |  
+ |  __rmul__(...)
+ |      x.__rmul__(n) <==> n*x
+ |  
+ |  __sizeof__(...)
+ |      S.__sizeof__() -> size of S in memory, in bytes
+ |  
+ |  __str__(...)
+ |      x.__str__() <==> str(x)
+ |  
+ |  capitalize(...)
+ |      S.capitalize() -> string
+ |      
+ |      Return a copy of the string S with only its first character
+ |      capitalized.
+ |  
+ |  center(...)
+ |      S.center(width[, fillchar]) -> string
+ |      
+ |      Return S centered in a string of length width. Padding is
+ |      done using the specified fill character (default is a space)
+ |  
+ |  count(...)
+ |      S.count(sub[, start[, end]]) -> int
+ |      
+ |      Return the number of non-overlapping occurrences of substring sub in
+ |      string S[start:end].  Optional arguments start and end are interpreted
+ |      as in slice notation.
+ |  
+ |  decode(...)
+ |      S.decode([encoding[,errors]]) -> object
+ |      
+ |      Decodes S using the codec registered for encoding. encoding defaults
+ |      to the default encoding. errors may be given to set a different error
+ |      handling scheme. Default is 'strict' meaning that encoding errors raise
+ |      a UnicodeDecodeError. Other possible values are 'ignore' and 'replace'
+ |      as well as any other name registered with codecs.register_error that is
+ |      able to handle UnicodeDecodeErrors.
+ |  
+ |  encode(...)
+ |      S.encode([encoding[,errors]]) -> object
+ |      
+ |      Encodes S using the codec registered for encoding. encoding defaults
+ |      to the default encoding. errors may be given to set a different error
+ |      handling scheme. Default is 'strict' meaning that encoding errors raise
+ |      a UnicodeEncodeError. Other possible values are 'ignore', 'replace' and
+ |      'xmlcharrefreplace' as well as any other name registered with
+ |      codecs.register_error that is able to handle UnicodeEncodeErrors.
+ |  
+ |  endswith(...)
+ |      S.endswith(suffix[, start[, end]]) -> bool
+ |      
+ |      Return True if S ends with the specified suffix, False otherwise.
+ |      With optional start, test S beginning at that position.
+ |      With optional end, stop comparing S at that position.
+ |      suffix can also be a tuple of strings to try.
+ |  
+ |  expandtabs(...)
+ |      S.expandtabs([tabsize]) -> string
+ |      
+ |      Return a copy of S where all tab characters are expanded using spaces.
+ |      If tabsize is not given, a tab size of 8 characters is assumed.
+ |  
+ |  find(...)
+ |      S.find(sub [,start [,end]]) -> int
+ |      
+ |      Return the lowest index in S where substring sub is found,
+ |      such that sub is contained within s[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Return -1 on failure.
+ |  
+ |  format(...)
+ |      S.format(*args, **kwargs) -> unicode
+ |  
+ |  index(...)
+ |      S.index(sub [,start [,end]]) -> int
+ |      
+ |      Like S.find() but raise ValueError when the substring is not found.
+ |  
+ |  isalnum(...)
+ |      S.isalnum() -> bool
+ |      
+ |      Return True if all characters in S are alphanumeric
+ |      and there is at least one character in S, False otherwise.
+ |  
+ |  isalpha(...)
+ |      S.isalpha() -> bool
+ |      
+ |      Return True if all characters in S are alphabetic
+ |      and there is at least one character in S, False otherwise.
+ |  
+ |  isdigit(...)
+ |      S.isdigit() -> bool
+ |      
+ |      Return True if all characters in S are digits
+ |      and there is at least one character in S, False otherwise.
+ |  
+ |  islower(...)
+ |      S.islower() -> bool
+ |      
+ |      Return True if all cased characters in S are lowercase and there is
+ |      at least one cased character in S, False otherwise.
+ |  
+ |  isspace(...)
+ |      S.isspace() -> bool
+ |      
+ |      Return True if all characters in S are whitespace
+ |      and there is at least one character in S, False otherwise.
+ |  
+ |  istitle(...)
+ |      S.istitle() -> bool
+ |      
+ |      Return True if S is a titlecased string and there is at least one
+ |      character in S, i.e. uppercase characters may only follow uncased
+ |      characters and lowercase characters only cased ones. Return False
+ |      otherwise.
+ |  
+ |  isupper(...)
+ |      S.isupper() -> bool
+ |      
+ |      Return True if all cased characters in S are uppercase and there is
+ |      at least one cased character in S, False otherwise.
+ |  
+ |  join(...)
+ |      S.join(sequence) -> string
+ |      
+ |      Return a string which is the concatenation of the strings in the
+ |      sequence.  The separator between elements is S.
+ |  
+ |  ljust(...)
+ |      S.ljust(width[, fillchar]) -> string
+ |      
+ |      Return S left-justified in a string of length width. Padding is
+ |      done using the specified fill character (default is a space).
+ |  
+ |  lower(...)
+ |      S.lower() -> string
+ |      
+ |      Return a copy of the string S converted to lowercase.
+ |  
+ |  lstrip(...)
+ |      S.lstrip([chars]) -> string or unicode
+ |      
+ |      Return a copy of the string S with leading whitespace removed.
+ |      If chars is given and not None, remove characters in chars instead.
+ |      If chars is unicode, S will be converted to unicode before stripping
+ |  
+ |  partition(...)
+ |      S.partition(sep) -> (head, sep, tail)
+ |      
+ |      Search for the separator sep in S, and return the part before it,
+ |      the separator itself, and the part after it.  If the separator is not
+ |      found, return S and two empty strings.
+ |  
+ |  replace(...)
+ |      S.replace (old, new[, count]) -> string
+ |      
+ |      Return a copy of string S with all occurrences of substring
+ |      old replaced by new.  If the optional argument count is
+ |      given, only the first count occurrences are replaced.
+ |  
+ |  rfind(...)
+ |      S.rfind(sub [,start [,end]]) -> int
+ |      
+ |      Return the highest index in S where substring sub is found,
+ |      such that sub is contained within s[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Return -1 on failure.
+ |  
+ |  rindex(...)
+ |      S.rindex(sub [,start [,end]]) -> int
+ |      
+ |      Like S.rfind() but raise ValueError when the substring is not found.
+ |  
+ |  rjust(...)
+ |      S.rjust(width[, fillchar]) -> string
+ |      
+ |      Return S right-justified in a string of length width. Padding is
+ |      done using the specified fill character (default is a space)
+ |  
+ |  rpartition(...)
+ |      S.rpartition(sep) -> (tail, sep, head)
+ |      
+ |      Search for the separator sep in S, starting at the end of S, and return
+ |      the part before it, the separator itself, and the part after it.  If the
+ |      separator is not found, return two empty strings and S.
+ |  
+ |  rsplit(...)
+ |      S.rsplit([sep [,maxsplit]]) -> list of strings
+ |      
+ |      Return a list of the words in the string S, using sep as the
+ |      delimiter string, starting at the end of the string and working
+ |      to the front.  If maxsplit is given, at most maxsplit splits are
+ |      done. If sep is not specified or is None, any whitespace string
+ |      is a separator.
+ |  
+ |  rstrip(...)
+ |      S.rstrip([chars]) -> string or unicode
+ |      
+ |      Return a copy of the string S with trailing whitespace removed.
+ |      If chars is given and not None, remove characters in chars instead.
+ |      If chars is unicode, S will be converted to unicode before stripping
+ |  
+ |  split(...)
+ |      S.split([sep [,maxsplit]]) -> list of strings
+ |      
+ |      Return a list of the words in the string S, using sep as the
+ |      delimiter string.  If maxsplit is given, at most maxsplit
+ |      splits are done. If sep is not specified or is None, any
+ |      whitespace string is a separator and empty strings are removed
+ |      from the result.
+ |  
+ |  splitlines(...)
+ |      S.splitlines([keepends]) -> list of strings
+ |      
+ |      Return a list of the lines in S, breaking at line boundaries.
+ |      Line breaks are not included in the resulting list unless keepends
+ |      is given and true.
+ |  
+ |  startswith(...)
+ |      S.startswith(prefix[, start[, end]]) -> bool
+ |      
+ |      Return True if S starts with the specified prefix, False otherwise.
+ |      With optional start, test S beginning at that position.
+ |      With optional end, stop comparing S at that position.
+ |      prefix can also be a tuple of strings to try.
+ |  
+ |  strip(...)
+ |      S.strip([chars]) -> string or unicode
+ |      
+ |      Return a copy of the string S with leading and trailing
+ |      whitespace removed.
+ |      If chars is given and not None, remove characters in chars instead.
+ |      If chars is unicode, S will be converted to unicode before stripping
+ |  
+ |  swapcase(...)
+ |      S.swapcase() -> string
+ |      
+ |      Return a copy of the string S with uppercase characters
+ |      converted to lowercase and vice versa.
+ |  
+ |  title(...)
+ |      S.title() -> string
+ |      
+ |      Return a titlecased version of S, i.e. words start with uppercase
+ |      characters, all remaining cased characters have lowercase.
+ |  
+ |  translate(...)
+ |      S.translate(table [,deletechars]) -> string
+ |      
+ |      Return a copy of the string S, where all characters occurring
+ |      in the optional argument deletechars are removed, and the
+ |      remaining characters have been mapped through the given
+ |      translation table, which must be a string of length 256.
+ |  
+ |  upper(...)
+ |      S.upper() -> string
+ |      
+ |      Return a copy of the string S converted to uppercase.
+ |  
+ |  zfill(...)
+ |      S.zfill(width) -> string
+ |      
+ |      Pad a numeric string S with zeros on the left, to fill a field
+ |      of the specified width.  The string S is never truncated.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __new__ = <built-in method __new__ of type object at 0x82258e0>
+ |      T.__new__(S, ...) -> a new object with type S, a subtype of T
+
+>>> dir(str)
+['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+>>> num = bin(24)
+>>> num.split('1')
+['0b', '', '000']
+>>> num
+'0b11000'
+>>> num
+'0b11000'
+>>> help(str.rpartition)
+Help on method_descriptor:
+
+rpartition(...)
+    S.rpartition(sep) -> (tail, sep, head)
+    
+    Search for the separator sep in S, starting at the end of S, and return
+    the part before it, the separator itself, and the part after it.  If the
+    separator is not found, return two empty strings and S.
+
+>>> dir(str)
+['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+>>> import string
+>>> help(string)
+Help on module string:
+
+NAME
+    string - A collection of string operations (most are no longer used).
+
+FILE
+    /usr/lib/python2.6/string.py
+
+MODULE DOCS
+    http://docs.python.org/library/string
+
+DESCRIPTION
+    Warning: most of the code you see here isn't normally used nowadays.
+    Beginning with Python 1.6, many of these functions are implemented as
+    methods on the standard string object. They used to be implemented by
+    a built-in module called strop, but strop is now obsolete itself.
+    
+    Public module variables:
+    
+    whitespace -- a string containing all characters considered whitespace
+    lowercase -- a string containing all characters considered lowercase letters
+    uppercase -- a string containing all characters considered uppercase letters
+    letters -- a string containing all characters considered letters
+    digits -- a string containing all characters considered decimal digits
+    hexdigits -- a string containing all characters considered hexadecimal digits
+    octdigits -- a string containing all characters considered octal digits
+    punctuation -- a string containing all characters considered punctuation
+    printable -- a string containing all characters considered printable
+
+CLASSES
+    __builtin__.object
+        Formatter
+        Template
+    
+    class Formatter(__builtin__.object)
+     |  Methods defined here:
+     |  
+     |  check_unused_args(self, used_args, args, kwargs)
+     |  
+     |  convert_field(self, value, conversion)
+     |  
+     |  format(self, format_string, *args, **kwargs)
+     |  
+     |  format_field(self, value, format_spec)
+     |  
+     |  get_field(self, field_name, args, kwargs)
+     |      # given a field_name, find the object it references.
+     |      #  field_name:   the field being looked up, e.g. "0.name"
+     |      #                 or "lookup[3]"
+     |      #  used_args:    a set of which args have been used
+     |      #  args, kwargs: as passed in to vformat
+     |  
+     |  get_value(self, key, args, kwargs)
+     |  
+     |  parse(self, format_string)
+     |      # returns an iterable that contains tuples of the form:
+     |      # (literal_text, field_name, format_spec, conversion)
+     |      # literal_text can be zero length
+     |      # field_name can be None, in which case there's no
+     |      #  object to format and output
+     |      # if field_name is not None, it is looked up, formatted
+     |      #  with format_spec and conversion and then used
+     |  
+     |  vformat(self, format_string, args, kwargs)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+    
+    class Template(__builtin__.object)
+     |  A string class for supporting $-substitutions.
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, template)
+     |  
+     |  safe_substitute(self, *args, **kws)
+     |  
+     |  substitute(self, *args, **kws)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  __metaclass__ = <class 'string._TemplateMetaclass'>
+     |  
+     |  
+     |  delimiter = '$'
+     |  
+     |  idpattern = '[_a-z][_a-z0-9]*'
+     |  
+     |  pattern = <_sre.SRE_Pattern object at 0x8f71138>
+
+FUNCTIONS
+    atof(s)
+        atof(s) -> float
+        
+        Return the floating point number represented by the string s.
+    
+    atoi(s, base=10)
+        atoi(s [,base]) -> int
+        
+        Return the integer represented by the string s in the given
+        base, which defaults to 10.  The string s must consist of one
+        or more digits, possibly preceded by a sign.  If base is 0, it
+        is chosen from the leading characters of s, 0 for octal, 0x or
+        0X for hexadecimal.  If base is 16, a preceding 0x or 0X is
+        accepted.
+    
+    atol(s, base=10)
+        atol(s [,base]) -> long
+        
+        Return the long integer represented by the string s in the
+        given base, which defaults to 10.  The string s must consist
+        of one or more digits, possibly preceded by a sign.  If base
+        is 0, it is chosen from the leading characters of s, 0 for
+        octal, 0x or 0X for hexadecimal.  If base is 16, a preceding
+        0x or 0X is accepted.  A trailing L or l is not accepted,
+        unless base is 0.
+    
+    capitalize(s)
+        capitalize(s) -> string
+        
+        Return a copy of the string s with only its first character
+        capitalized.
+    
+    capwords(s, sep=None)
+        capwords(s [,sep]) -> string
+        
+        Split the argument into words using split, capitalize each
+        word using capitalize, and join the capitalized words using
+        join.  If the optional second argument sep is absent or None,
+        runs of whitespace characters are replaced by a single space
+        and leading and trailing whitespace are removed, otherwise
+        sep is used to split and join the words.
+    
+    center(s, width, *args)
+        center(s, width[, fillchar]) -> string
+        
+        Return a center version of s, in a field of the specified
+        width. padded with spaces as needed.  The string is never
+        truncated.  If specified the fillchar is used instead of spaces.
+    
+    count(s, *args)
+        count(s, sub[, start[,end]]) -> int
+        
+        Return the number of occurrences of substring sub in string
+        s[start:end].  Optional arguments start and end are
+        interpreted as in slice notation.
+    
+    expandtabs(s, tabsize=8)
+        expandtabs(s [,tabsize]) -> string
+        
+        Return a copy of the string s with all tab characters replaced
+        by the appropriate number of spaces, depending on the current
+        column, and the tabsize (default 8).
+    
+    find(s, *args)
+        find(s, sub [,start [,end]]) -> in
+        
+        Return the lowest index in s where substring sub is found,
+        such that sub is contained within s[start,end].  Optional
+        arguments start and end are interpreted as in slice notation.
+        
+        Return -1 on failure.
+    
+    index(s, *args)
+        index(s, sub [,start [,end]]) -> int
+        
+        Like find but raises ValueError when the substring is not found.
+    
+    join(words, sep=' ')
+        join(list [,sep]) -> string
+        
+        Return a string composed of the words in list, with
+        intervening occurrences of sep.  The default separator is a
+        single space.
+        
+        (joinfields and join are synonymous)
+    
+    joinfields = join(words, sep=' ')
+        join(list [,sep]) -> string
+        
+        Return a string composed of the words in list, with
+        intervening occurrences of sep.  The default separator is a
+        single space.
+        
+        (joinfields and join are synonymous)
+    
+    ljust(s, width, *args)
+        ljust(s, width[, fillchar]) -> string
+        
+        Return a left-justified version of s, in a field of the
+        specified width, padded with spaces as needed.  The string is
+        never truncated.  If specified the fillchar is used instead of spaces.
+    
+    lower(s)
+        lower(s) -> string
+        
+        Return a copy of the string s converted to lowercase.
+    
+    lstrip(s, chars=None)
+        lstrip(s [,chars]) -> string
+        
+        Return a copy of the string s with leading whitespace removed.
+        If chars is given and not None, remove characters in chars instead.
+    
+    maketrans(...)
+        maketrans(frm, to) -> string
+        
+        Return a translation table (a string of 256 bytes long)
+        suitable for use in string.translate.  The strings frm and to
+        must be of the same length.
+    
+    replace(s, old, new, maxsplit=-1)
+        replace (str, old, new[, maxsplit]) -> string
+        
+        Return a copy of string str with all occurrences of substring
+        old replaced by new. If the optional argument maxsplit is
+        given, only the first maxsplit occurrences are replaced.
+    
+    rfind(s, *args)
+        rfind(s, sub [,start [,end]]) -> int
+        
+        Return the highest index in s where substring sub is found,
+        such that sub is contained within s[start,end].  Optional
+        arguments start and end are interpreted as in slice notation.
+        
+        Return -1 on failure.
+    
+    rindex(s, *args)
+        rindex(s, sub [,start [,end]]) -> int
+        
+        Like rfind but raises ValueError when the substring is not found.
+    
+    rjust(s, width, *args)
+        rjust(s, width[, fillchar]) -> string
+        
+        Return a right-justified version of s, in a field of the
+        specified width, padded with spaces as needed.  The string is
+        never truncated.  If specified the fillchar is used instead of spaces.
+    
+    rsplit(s, sep=None, maxsplit=-1)
+        rsplit(s [,sep [,maxsplit]]) -> list of strings
+        
+        Return a list of the words in the string s, using sep as the
+        delimiter string, starting at the end of the string and working
+        to the front.  If maxsplit is given, at most maxsplit splits are
+        done. If sep is not specified or is None, any whitespace string
+        is a separator.
+    
+    rstrip(s, chars=None)
+        rstrip(s [,chars]) -> string
+        
+        Return a copy of the string s with trailing whitespace removed.
+        If chars is given and not None, remove characters in chars instead.
+    
+    split(s, sep=None, maxsplit=-1)
+        split(s [,sep [,maxsplit]]) -> list of strings
+        
+        Return a list of the words in the string s, using sep as the
+        delimiter string.  If maxsplit is given, splits at no more than
+        maxsplit places (resulting in at most maxsplit+1 words).  If sep
+        is not specified or is None, any whitespace string is a separator.
+        
+        (split and splitfields are synonymous)
+    
+    splitfields = split(s, sep=None, maxsplit=-1)
+        split(s [,sep [,maxsplit]]) -> list of strings
+        
+        Return a list of the words in the string s, using sep as the
+        delimiter string.  If maxsplit is given, splits at no more than
+        maxsplit places (resulting in at most maxsplit+1 words).  If sep
+        is not specified or is None, any whitespace string is a separator.
+        
+        (split and splitfields are synonymous)
+    
+    strip(s, chars=None)
+        strip(s [,chars]) -> string
+        
+        Return a copy of the string s with leading and trailing
+        whitespace removed.
+        If chars is given and not None, remove characters in chars instead.
+        If chars is unicode, S will be converted to unicode before stripping.
+    
+    swapcase(s)
+        swapcase(s) -> string
+        
+        Return a copy of the string s with upper case characters
+        converted to lowercase and vice versa.
+    
+    translate(s, table, deletions='')
+        translate(s,table [,deletions]) -> string
+        
+        Return a copy of the string s, where all characters occurring
+        in the optional argument deletions are removed, and the
+        remaining characters have been mapped through the given
+        translation table, which must be a string of length 256.  The
+        deletions argument is not allowed for Unicode strings.
+    
+    upper(s)
+        upper(s) -> string
+        
+        Return a copy of the string s converted to uppercase.
+    
+    zfill(x, width)
+        zfill(x, width) -> string
+        
+        Pad a numeric string x with zeros on the left, to fill a field
+        of the specified width.  The string x is never truncated.
+
+DATA
+    ascii_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    ascii_lowercase = 'abcdefghijklmnopqrstuvwxyz'
+    ascii_uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    digits = '0123456789'
+    hexdigits = '0123456789abcdefABCDEF'
+    letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    lowercase = 'abcdefghijklmnopqrstuvwxyz'
+    octdigits = '01234567'
+    printable = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTU...
+    punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+    uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    whitespace = '\t\n\x0b\x0c\r '
+
+
+>>> board
+['x', None, None, None, 'x', None, None, None, 'x']
+>>> num
+'0b11000'
+>>> num.find('1')
+2
+>>> [num.find('1',i,i) for i in range(2,len(num))]
+[-1, -1, -1, -1, -1]
+>>> [num.find('1',i,i) for i in range(0,len(num))]
+[-1, -1, -1, -1, -1, -1, -1]
+>>> num.find('1',0,7)
+2
+>>> [num.find('1',i,len(num)) for i in range(2,len(num))]
+[2, 3, -1, -1, -1]
+>>> num = bin(193)
+>>> [num.find('1',i,i) for i in range(2,len(num))]
+[-1, -1, -1, -1, -1, -1, -1, -1]
+>>> num
+'0b11000001'
+>>> [num.find('1',i,i) for i in range(2,len(num))]
+[-1, -1, -1, -1, -1, -1, -1, -1]
+>>> [num.find('1',i,len(num)) for i in range(2,len(num))]
+[2, 3, 9, 9, 9, 9, 9, 9]
+>>> num
+'0b11000001'
+>>> [num.find('1',i,len(num)) for i in range(2,len(num))]
+[2, 3, 9, 9, 9, 9, 9, 9]
+>>> [num.find('1',i,len(num)) for i in range(2,len(num))]
+[2, 3, 9, 9, 9, 9, 9, 9]
+>>> [num.find('1',i,len(num)) for i in range(0,len(num))]
+[2, 3, 9, 9, 9, 9, 9, 9]
+>>> [2, 3, 9, 9, 9, 9, 9, 9]
+>>>   File "<stdin>", line 1
+    >>> [num.find('1',i,len(num)) for i in range(2,len(num))]
+     ^
+SyntaxError: invalid syntax
+>>> [2, 3, 9, 9, 9, 9, 9, 9]
+>>>   File "<stdin>", line 1
+    >>> [num.find('1',i,len(num)) for i in range(0,len(num))]
+     ^
+SyntaxError: invalid syntax
+>>> [num.find('1',i,len(num)) for i in range(0,len(num))]
+[2, 2, 2, 3, 9, 9, 9, 9, 9, 9]
+>>> num
+'0b11000001'
+>>> [num.find('1',i,len(num)) for i in range(2,len(num)+1)]
+[2, 3, 9, 9, 9, 9, 9, 9, -1]
+>>> [num.find('1',i,len(num)+1) for i in range(0,len(num))]
+[2, 2, 2, 3, 9, 9, 9, 9, 9, 9]
+>>> len(num)
+10
+>>> num[10]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: string index out of range
+>>> num[9]
+'1'
+>>> num.find('1',8,9)
+-1
+>>> num.find('1',8,10)
+9
+>>> num.find('1',7,9)
+-1
+>>> num.find('1',6,10)
+9
+>>> [num.find('1',i,len(num)+1) for i in range(2,len(num))]
+[2, 3, 9, 9, 9, 9, 9, 9]
+>>> set[num.find('1',i,len(num)+1) for i in range(2,len(num))])
+  File "<stdin>", line 1
+    set[num.find('1',i,len(num)+1) for i in range(2,len(num))])
+                                     ^
+SyntaxError: invalid syntax
+>>> set([num.find('1',i,len(num)+1) for i in range(2,len(num))])
+set([9, 2, 3])
+>>> 
