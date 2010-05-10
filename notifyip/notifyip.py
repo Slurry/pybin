@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3.1
 from time import sleep
 import filecmp
 import urllib
@@ -10,16 +10,17 @@ def save_current_ip():
 
     os.chdir(os.path.expanduser('~'))
     get_page = subprocess.Popen(['wget', '-q', '-O', 'RST_status.htm', site])
-    sleep(1)
+    sleep(3)
 
     txt_conv = subprocess.Popen(['html2text', '-o', 'rst-status.txt', 'RST_status.htm',])
 
     fetchip = subprocess.Popen(['grep', '-m 1', 'IP Address', 'rst-status.txt'],
                            stdout = subprocess.PIPE).stdout.read()
     currentip = fetchip[21:].strip()
-
+    print('currentip' , currentip)
     f = open('/home/jayson/currentip.txt','w')
     f.write(currentip)
+    sleep(3)
     f.close()
     
     #os.remove('rst-status.txt')
@@ -33,14 +34,15 @@ def save_current_ip():
     return ip
 
 if os.path.isfile(home + '/currentip.txt') != True:
+    print('\nipchange',)
     save_current_ip()
-
+    
     os.system('/home/jayson/ipstatus')
 else:
     lastip = open('/home/jayson/currentip.txt','r').read()
 
 
-    get_page = subprocess.Popen(['wget', '-q', site])
+    get_page = subprocess.Popen(['wget', '-q','-O', 'RST_status.htm', site])
 #    sleep(1)
     txt_conv = subprocess.Popen(['html2text', '-o', 'rst-status.txt', 'RST_status.htm',])
     sleep(1)
@@ -59,7 +61,7 @@ else:
         os.remove('/home/jayson/currentip.txt')
         save_current_ip()
         os.system('/home/jayson/ipstatus')
-        print "IP address changed from " + lastip + " to " + newestip
+        print "ipchange " + " to " + newestip
     else:
         print "NO CHANGE"
         
