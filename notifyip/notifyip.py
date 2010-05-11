@@ -33,7 +33,7 @@ def sendip(ip):
            '-t', 'williams.jayson@gmail.com',
            'jwilli7@amerigroupcorp.com',
            '-u', ip, '-s', 'smtp.gmail.com:587',
-           '-xu', 'williams.jayson', '-xp', 'Life10l29i38f47e',
+           '-xu', 'williams.jayson', '-xp', 'password',
            '-m', ip]
 
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
