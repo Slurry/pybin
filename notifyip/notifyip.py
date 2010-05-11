@@ -1,69 +1,80 @@
 #!/usr/bin/python3.1
-from time import sleep
-import filecmp
-import urllib
+import time
+import urllib.request
 import os
 import subprocess
-home = os.path.expanduser('~')
-site = 'http://admin:password@192.168.1.1/RST_status.htm'
-def save_current_ip():
+import re
 
-    os.chdir(os.path.expanduser('~'))
-    get_page = subprocess.Popen(['wget', '-q', '-O', 'RST_status.htm', site])
-    sleep(3)
+log = '/var/log/notifyip.log'
+logfile = open(log,'a')
+logfile.write('Notifyip service started at {}\n'.format(time.strftime('%#c')))
+time.sleep(3)
+logfile.close
 
-    txt_conv = subprocess.Popen(['html2text', '-o', 'rst-status.txt', 'RST_status.htm',])
+regex = re.compile('>[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+<')
+currentip_file = '/home/jayson/currentip.txt'
+#get router status page and extract current ip
+password_mgr = urllib.request.HTTPPasswordMgrWithDefaultRealm()
+top_level_url = 'http://192.168.1.1/'
+user = 'admin'
+password = 'password'
+password_mgr.add_password(None, top_level_url, user, password)
+handler = urllib.request.HTTPBasicAuthHandler(password_mgr)
+opener = urllib.request.build_opener(handler)
+urllib.request.install_opener(opener)
+f = urllib.request.urlopen('http://192.168.1.1/RST_status.htm')
+page= str(f.read())
+addresses = regex.findall(page)
+newestip = addresses[0].strip('<>')
 
-    fetchip = subprocess.Popen(['grep', '-m 1', 'IP Address', 'rst-status.txt'],
-                           stdout = subprocess.PIPE).stdout.read()
-    currentip = fetchip[21:].strip()
-    print('currentip' , currentip)
-    f = open('/home/jayson/currentip.txt','w')
-    f.write(currentip)
-    sleep(3)
-    f.close()
+
+def sendip(ip):
+    cmd = ['sendEmail','-f', 'williams.jasyon@gmail.com',
+           '-t', 'williams.jayson@gmail.com',
+           'jwilli7@amerigroupcorp.com',
+           '-u', ip, '-s', 'smtp.gmail.com:587',
+           '-xu', 'williams.jayson', '-xp', 'Life10l29i38f47e',
+           '-m', ip]
+
+    process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+    result = process.communicate()[0].decode('UTF')
+    logfile = open(log,'a')
+    logfile.write(result)
+    time.sleep(3)
+    logfile.close()
     
-    #os.remove('rst-status.txt')
-    #os.remove('RST_status.htm')
-
-
-
-    #os.system('dig jwmlt2 +short > currentip.txt')
-    #ip = urllib.urlopen('http://whatismyip.org').read()
-    ip = open('/home/jayson/currentip.txt','r').read()
-    return ip
-
-if os.path.isfile(home + '/currentip.txt') != True:
-    print('\nipchange',)
-    save_current_ip()
     
-    os.system('/home/jayson/ipstatus')
-else:
-    lastip = open('/home/jayson/currentip.txt','r').read()
+# get last ip fetch from file or create one
+exitflag = False
+while not exitflag:
 
-
-    get_page = subprocess.Popen(['wget', '-q','-O', 'RST_status.htm', site])
-#    sleep(1)
-    txt_conv = subprocess.Popen(['html2text', '-o', 'rst-status.txt', 'RST_status.htm',])
-    sleep(1)
-
-    fetchip = subprocess.Popen(['grep', '-m 1', 'IP Address', 'rst-status.txt'],
-                           stdout = subprocess.PIPE).stdout.read()
-    currentip = fetchip[21:].strip()
-    f = open('/home/jayson/newestip.txt','w',)
-    f.write(currentip)
-    f.close()
-    
-    #os.system('dig jwmlt2 +short > /home/jayson/newestip.txt')
-    newestip = open('/home/jayson/newestip.txt','r').read()
-    #currentip = urllib.urlopen('http://whatismyip.org').read()
-    if lastip.strip() != newestip.strip():
-        os.remove('/home/jayson/currentip.txt')
-        save_current_ip()
-        os.system('/home/jayson/ipstatus')
-        print "ipchange " + " to " + newestip
+    if os.path.exists(currentip_file):
+        file = open(currentip_file,'r')
+        lastip  = file.read().strip()
+        file.close()
+        if lastip == newestip:
+            pass
+            #print('no change in ip address ', lastip)
+        else:
+            file = open(currentip_file,'w')
+            file.write(newestip)
+            file.close
+            file = open(log,'a')
+            logfile.write('{}-ip changed from {} to {}\n'.format(time.strftime('%#c'), lastip, newestip))
+            time.sleep(3)
+            sendip(newestip)
     else:
-        print "NO CHANGE"
-        
-#if os.path.exists('/home/jayson/rst-status.txt') : os.remove('/home/jayson/rst-status.txt')
-#if os.path.exists('/home/jayson/RST_status.htm') : os.remove('/home/jayson/RST_status.htm')
+        file = open(currentip_file,'w')
+        file.write(newestip)
+        logfile = open(log,'a')
+        logfile.write('creating currentip.txt file. IP is {}\n'.format(newestip))
+        time.sleep(3)
+        file.close()
+        logfile.close()
+        sendip(newestip)
+
+#    exitflag = True
+    time.sleep(300)
+
+
+
